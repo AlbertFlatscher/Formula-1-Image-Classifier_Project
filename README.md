@@ -31,8 +31,11 @@ Formula-1-Image-Classifier/
 |
 ├── saved_models/
 │   ├── cars.xml
-│   ├── cas1.xml
-│   ├── cas1.xml
+│   ├── checkcas.xml
+│   ├── cas3.xml
+│   ├── F1_Image_Classifier_DO_0p1__LR_0p0001.h5
+│   ├── F1_Image_Classifier_DO_0p15__LR_0p0001.h5
+│   ├── F1_Image_Classifier_DO_0p15__LR_0p001.h5
 │   └── F1_2019_Image_Classifier.h5
 │
 ├── data/ -> .zip container needed to be reduced due to githubs max. file size of 100MB
