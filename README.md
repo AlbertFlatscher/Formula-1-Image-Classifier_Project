@@ -8,8 +8,6 @@ Building an Image Classifier Capable of Recognizing Different F1 Teams as Classe
 3. [Files](#files)
 4. [Libraries](#libraries)
 5. [Results](#results)
-6. [Licensing](#licensing)
-7. [Code Execution](#execution)
 
 ## Project Motivation <a name="motivation"></a>
 
@@ -23,7 +21,6 @@ With this approach it should be possible to detect each F1 car in an image one b
 The content of this project consist of the following files:
 <ul>
   <li>Image_Classifier_using_Object_Detection.ipynb - Jupyter Notebook containg all the code and detailed documentation about the project
-  <li>categories.csv - maps the messages into one of 36 categories
 </ul>
 
 ```
@@ -69,6 +66,7 @@ Here are the additional Python libraries used within this project:
 <ul>
   <li>os</li>
   <li>pathlib from Path</li>
+  <li>pandas as pd</li>
   <li>numpy as np</li>
   <li>matplotlib.pyplot as plt</li>
   <li>json</li>
@@ -86,29 +84,14 @@ Here are the additional Python libraries used within this project:
 
 ## Results <a name="results"></a>
 
-The best performing ML model conained a CountVectorizer, StartingVerbExtractor and a MultiOutputClassifier using AdaBoost as an estimator. The best parameters for the Estimator were: n_estimators=100, learning_rate=0.01.
 
-This enabled us to get the following metrics:
-<li>Accuracy: 0.944</li>
-<li>Precision: 0.932</li>
-<li>Recall: 0.944</li>
-<li>F1-score: 0.9301</li>
+The result of the model evaluation shows the best performance for:
 
-We were able to to use this pipeline for creating a Web Application which can be used for disaster response coordination.
-
-## Licensing <a name="licensing"></a>
-
-Thanks to [Appen](https://www.appen.com/) for providing the data.
-
-<div class="container">
-    <h2>Code Execution <a name="execution"></a></h2>
-
-    # To create a processed sqlite db
-    python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
-
-    # To train and save a pkl model
-    python train_classifier.py ../data/DisasterResponse.db classifier.pkl
-
-    # To deploy the application locally
-    python run.py
-</div>
+**Single-Label Classifier: saved_models/`F1_Image_Classifier_DO_0p1__LR_0p0001`.h5**
+- Loss on the single car Test Set: 1.179
+- Accuracy on the single car Test Set: 81.537%
+- Threshhold = 0.275
+    - Accuracy: 0.10
+    - Precision: 0.76
+    - Recall: 0.43
+    - F1 Score: 0.49
