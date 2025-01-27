@@ -95,6 +95,10 @@ The result of the model evaluation shows the best performance for:
 - Accuracy on the single car Test Set: 81.537%
 - Threshhold = 0.275
     - Accuracy: 0.10
-    - Precision: 0.76
-    - Recall: 0.43
-    - F1 Score: 0.49
+    - Partial Accuracy:  0.77
+    - Micro Precision: 0.76
+    - Micro Recall: 0.43
+    - Micro F1 Score: 0.49
+    - Macro Precision: 0.31
+    - Macro Recall: 0.32
+    - Macro F1 Score: 0.29
