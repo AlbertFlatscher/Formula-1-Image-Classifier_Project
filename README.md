@@ -35,7 +35,7 @@ Formula-1-Image-Classifier/
 │   ├── cas1.xml
 │   └── F1_2019_Image_Classifier.h5
 │
-├── data/
+├── data/ -> .zip container needed to be reduced due to githubs max. file size of 100MB
 │   ├── multi_car/ -> training data for single-label classifier
 │       ├── alfa_romeo/
 │       ├── bwt/
